@@ -1,0 +1,289 @@
+
+body{
+    margin:0 ;
+    padding:0 ;
+    box-sizing: ;
+    width: 90vw;
+    
+}
+:root{
+    --clr-primary1:#8e443d;
+    --clr-primary2:#8390fa;
+}
+
+/*=====header------*/
+header{
+    height: 60px;
+    width: 90vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0;
+    position: fixed;
+    
+    top: 0px;
+    
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    position:sticky ;
+   
+
+    }
+div.title{
+    width: 20vw;
+    margin-right: 2em;
+
+}
+.menu{
+    width: 70vw;
+    
+    right: 0;
+     height: 60px;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0;
+    position: fixed;
+    background-color: var(--clr-primary2);
+    top: 0px;
+    
+}
+    nav{
+        position:relative;
+        margin-left: auto;
+        margin-right: 1em;
+        right: 0;
+
+    }
+
+    nav>ul{
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
+    }
+    nav li{
+        list-style-type: none;
+    
+    }
+    nav a{
+        text-decoration: none;
+        color:black;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .hurmbuger{
+        display:none;
+    }
+   
+/*========navLinks========*/
+    @media (max-width:600px){
+        header{
+            background-color:white;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            
+            z-index: 120;
+           
+            right: 0;
+            padding: 0;
+            scroll-padding: none;
+            
+        }
+
+
+     /*     .header-container{
+            position: relative;
+            display: block;
+        }
+        .menu{
+
+            display:none;
+            
+            }
+            nav{
+               display: none;
+            }
+            nav ul{
+                display:none;
+            
+            }
+
+            nav ul>li{
+                display: none;
+            } 
+        */
+        
+         .display-menu .menu{
+           display: block; 
+            width: 90vw;
+            height: calc(50vh +30px);
+            top:-30px;
+            right: -30px;
+            position: absolute;
+            background-color:var(--clr-primary2);
+            
+            
+        } 
+
+        .display-menu ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1em;
+
+        }
+
+        .display-menu li{
+            margin: .9em;
+        }
+
+        .display-menu li>a{
+            text-decoration: none;
+        }
+
+       
+        .hurmbuger{
+            
+            position: fixed; 
+            top: 0;
+            right:0px ;
+            left:60vw ;
+            z-index: 120;
+            color: black;
+        } 
+        .bar{
+            width: 30px;
+            height: 3.6px;
+            background-color: #555;
+            margin: 5px;
+        } 
+    }
+
+    /*======end of header=========*/
+
+    /*===========main============*/
+
+        /*introduction*/
+
+    .about-container{
+    width: 90vw;
+    height: calc(100vh - 60px);
+    
+    margin: 5em 0 1em 0;
+    
+
+        }
+
+.introduction{
+    text-align: center;
+    margin: 2em 0 0 0;
+}
+.introduction h2{
+    color: var(--clr-primary2);
+}
+.image{
+    margin: 0 0 0 0  ;
+    width: 90vw;
+    text-align: center;
+}
+.image img{
+    width: 200px;
+    border-radius: 40% 50% 40% 40%;
+
+
+}
+@media (min-width:600px){
+    .about-container{
+         width: 100vw;
+    height: calc(100vh - 60px);
+    
+    
+
+    }
+    .about-me{
+    width: 90vw;
+    
+    
+    
+}
+    
+}
+
+/*==who i am==*/
+
+.who-i-am{
+    width: 100vw;
+    max-width: 900px;
+    text-align: center;
+    margin: 2em auto;
+    background-color: (113, 133, 133)
+}
+
+/*==who i am==*/
+
+/*==my skills==*/
+.my-skills{
+     width: 100vw;
+     max-width: 900px;
+    text-align: center;
+    margin: 2em auto;
+}
+
+
+/*=======end of about me======*/
+
+/*=============footer============*/
+
+footer{
+    height: 25vh;
+    width:100vw ;
+    background-color:rgb(164, 209, 194) ;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.email{
+    margin: 2em;
+    
+}
+.email a{
+    color: rgb(8, 105, 73);
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+.email a:hover{
+    font-size:1.3em;
+}
+footer ul{
+    display: flex;
+    
+}
+
+footer li{
+    margin:0em 2em;
+    padding: .5em;
+    list-style-type: none;
+
+}
+.fa-instagram,
+.fa-whatsapp,
+.fa-facebook{
+    color:rgb(36, 110, 85);
+    padding: .2em;
+    
+}
+.fa-instagram:hover,
+.fa-whatsapp:hover,
+.fa-facebook:hover{
+    color:rgb(36, 110, 85);
+   padding: 0.1em;
+    
+}

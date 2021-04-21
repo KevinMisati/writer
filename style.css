@@ -1,0 +1,594 @@
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+:root {
+  --clr-primary1: #8e443d;
+  --clr-primary2: #8390fa;
+}
+p {
+  line-height: 1.5em;
+}
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.9em;
+}
+button{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 760px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+header {
+  height: 70px;
+  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  position: sticky;
+  background-color: var(--clr-primary2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
+}
+
+div.title {
+  margin-left: 2em;
+  margin-top: .9rem;
+  font-size :1.5rem;
+  height: 100%;
+  display: flex;
+  align-self: center;
+  width: auto;
+}
+.title a{
+  text-decoration: none;
+}
+div.title span{
+  color:crimson;
+}
+.menu{
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: ;
+  max-width:100% ;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+
+}
+nav li {
+  list-style-type: none;
+  /* margin: 0 3em 0 5em; */
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding:0 .5rem;
+}
+nav a:hover {
+  border-bottom: 2px solid white;
+  }
+
+  @media screen and (max-width:760px){
+    h1{
+      font-size: 3rem;
+    }
+     .hurmbuger {
+    position: fixed; 
+    top: 0;
+    z-index: 120;
+    color: black;
+    
+    cursor: pointer;
+  }
+  }
+
+@media (max-width: 900px) {
+  header {
+    position: sticky;
+    z-index: 120;
+  }
+  .menu {
+    display: none;
+  }
+  .title {
+    position: absolute;
+    left: 2px;
+  }
+
+  .display-menu header {
+    background-color: white;
+    width: 90vw;
+  }
+  .header-container {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    background-color: var(--clr-primary2);
+    transform: translateX(100%);
+    display: none;
+    overflow: hidden;
+    transition: transform 5s ease-in-out;
+  }
+  .display-menu nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:center ;
+    justify-content:center ;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: ;
+    margin: 2rem;
+    height: 100%;
+  }
+
+  .menu li {
+    margin: 2em 2em;
+  }
+
+  .display-menu .menu {
+    left: 0%;
+    transform: translateX(0);
+    display: block;
+    transition: all 2s ease;
+  }
+
+  .hurmbuger {
+    position: fixed;
+    top: 0;
+    right: 5px;
+    left: 82%;
+    z-index: 120;
+    color: black;
+    margin: 5px;
+    cursor: pointer;
+    padding: 0.5em 5em 0.5em 0;
+  }
+  .bar {
+    position: relative;
+    width: 30px;
+    height: 3.6px;
+    background-color: #555;
+    margin: 5px;
+    transition: transform .5s ease-in-out;
+  }
+
+  .display-menu .bar2 {
+    transform: translateY(-50px);
+    background: transparent;
+    transition: transform .5s ease-in-out;
+  
+  }
+  .display-menu .bar1 {
+    transform: translate(0px, 9px)  rotate(45deg) ;
+  }
+  .display-menu .bar3 {
+    transform: translate(0px, -9px)  rotate(-45deg) ;
+  }
+}
+
+/*================================main================================*/
+
+.about-container {
+  width: 100vw;
+  max-width: 100vw;
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(250, 250, 250, 0.3),
+      rgba(250, 250, 250, 0.1)
+    ),
+    url(./images/pexels-judit-peter-1766604\ \(1\).jpg) center/cover no-repeat;
+}
+.introduction {
+  text-align: center;
+}
+
+.introduction h1 {
+  color: var(--clr-primary2);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.introduction h2 {
+  margin-right: auto;
+  margin-left: auto;
+}
+.introduction h1.first {
+  animation: animateText 1s steps(9);
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0ch;
+}
+.introduction h1.second {
+  animation: animateText2 1.5s steps(5);
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  white-space: nowrap;
+  animation-delay: 0.5s;
+  width: 0ch;
+}
+.introduction h2.third {
+  animation: animateText3 2s steps(9);
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid black;
+  width: 0ch;
+}
+
+@keyframes animateText {
+  0% {
+    width: 0ch;
+    border-right: 4px solid black;
+  }
+  99.99% {
+    border-right: 4px solid black;
+  }
+  100% {
+    width: 9ch;
+    border-right: none;
+  }
+}
+@keyframes animateText2 {
+  0% {
+    width: 0ch;
+    border-right: 4px solid black;
+  }
+  99.99% {
+    border-right: 4px solid black;
+  }
+  100% {
+    width: 10ch;
+    border-right: none;
+  }
+}
+@keyframes animateText3 {
+  0% {
+    width: 0ch;
+    border-right: 4px solid black;
+  }
+  99.99% {
+    border-right: 4px solid black;
+  }
+  100% {
+    width: 20ch;
+    border-right: none;
+  }
+}
+
+
+button {
+  background-color: var(--clr-primary2);
+  outline: none;
+  width: 40; 
+  margin: 1em auto 0 auto;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  position: relative;
+  left: -1000px;
+  animation: animateButton 0.2s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+@keyframes animateButton {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: initial;
+  }
+}
+button:hover {
+  background-color: white;
+  outline: none;
+  border: 1px solid var(--clr-primary2);
+}
+
+@media screen and (max-width:760px){
+  .introduction h1 {
+
+  text-align: left;
+  font-size: 2.6rem;
+
+}
+.introduction h2 {
+  font-size: 2rem;
+}
+/* button{
+  width: 220px;
+  font-size: 1.3rem;
+} */
+}
+
+
+/*=======================who i am==========================*/
+.image {
+  width: 90vw;
+  text-align: center;
+}
+.who-i-am {
+  width: 90vw;
+  max-width: 1170px;
+  text-align: center;
+  margin: 2rem auto;
+  text-align: center;
+}
+.image {
+  width: 250px;
+  height: 300px;
+  margin: 2rem auto;
+  position: relative;
+  z-index: 100;
+}
+@media screen and (min-width:768px){
+  .image {
+  width: 550px;
+  height: 400px;
+  margin: 2rem auto;
+  position: relative;
+  z-index: 100;
+}
+.who-i-am-info{
+  align-self: center;
+  max-width: 500px;
+}
+}
+.who-i-am-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s ease-in;
+  z-index: 100;
+  object-fit: cover;
+
+
+}
+
+.image:after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -25px;
+  width: 100%;
+  height: 100%;
+  z-index: -50;
+  border: 4px solid red;
+}
+.image:hover .image:after {
+  top: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .who-i-am {
+    display: flex;
+  }
+  .image {
+  width: 400px;
+  height: 400px;
+  margin: 2rem auto;
+  position: relative;
+  z-index: 100;
+}
+.who-i-am-info{
+  align-self: center;
+  max-width: 500px;
+}
+}
+
+
+/*==who i am==*/
+
+/*==my skills==*/
+.skills-container{
+  background-color: #444;
+}
+.my-skills {
+  width: 100%;
+  max-width: 1270px;
+  text-align: center;
+  margin: 2em 0;
+  background-color: #444;
+  right: 0;
+  left: 0;
+  padding: 1em;
+  color: #ccc;
+  margin: 0 auto;
+}
+
+.skills-container h1{
+  margin: 1rem 0 0 auto;
+  color:#ccc ;
+}
+.my-skills h2{
+  margin: 1rem auto;
+}
+
+@media (min-width: 760px) {
+  div.my-skills {
+    display: flex;
+  }
+  .skill {
+    margin: 0 1em 0 1em;
+    width: 600px;
+  }
+  button {
+    width: 250px;
+  }
+}
+
+/*=======end of about me======*/
+
+/* ====================contact form============== */
+.contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+  margin: 2rem auto;
+}
+.input{
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  }
+  input[type="text"]:focus,input[type="email"]:focus,textarea:focus{
+    outline: none;
+  
+  }
+  input[type="text"],input[type="email"] {
+    font-size:1rem;
+    height: 2rem;
+    border:none;
+    border-bottom:2px solid black;
+
+  }
+.contact-form button {
+left: auto;
+position: relative;
+}
+@media screen and (max-width:760px){
+   input[type="text"],input[type="email"] {
+    font-size:1rem;
+    height: 2rem;
+    width: auto;
+  }
+
+}
+
+
+/* ====================end of contact form============== */
+
+/*=============footer============*/
+
+footer {
+  margin: 1em 0 0 0;
+  background-color: var(--clr-primary2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  width: 100%;
+  bottom: 0;
+  top: 100%;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+.email {
+  margin: 2em;
+  text-transform: capitalize;
+}
+.email:hover{
+  transform: scale(1.1);
+}
+.email span{
+  margin: 0 0 0 .5rem;
+  
+}
+.phone{
+  text-transform: none;
+}
+.email a {
+  color: rgb(8, 105, 73);
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+.email a:hover {
+}
+footer ul {
+  display: flex;
+  text-align: center;
+}
+
+footer li {
+  padding: 0.5em;
+  list-style-type: none;
+}
+
+.fa-instagram,
+.fa-whatsapp,
+.fa-facebook ,
+.fa-linkedin {
+  color:black /* rgb(36, 110, 85) */;
+  padding: 0.2em;
+}
+.fa-instagram:hover,
+.fa-whatsapp:hover,
+.fa-facebook:hover,
+.fa-linkedin:hover {
+  color: rgb(36, 110, 85);
+  padding: 0.1em;
+}
+@media screen and (min-width:768px){
+  footer{
+    height:30vh ;
+    bottom: -10px;
+  }
+footer li{
+  font-size: 2.5rem;
+
+}
+.email a{
+  font-size: 2rem;
+}
+
+
+}
+/*=============end of footer============*/
