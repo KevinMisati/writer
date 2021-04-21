@@ -12,6 +12,9 @@ body {
   --clr-primary1: #8e443d;
   --clr-primary2: #8390fa;
 }
+section{
+  padding: 5rem 0rem;
+}
 p {
   line-height: 1.5em;
 }
@@ -79,7 +82,6 @@ div.title span{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: ;
   max-width:100% ;
 }
 
@@ -165,7 +167,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: ;
     margin: 2rem;
     height: 100%;
   }
@@ -358,6 +359,9 @@ button:hover {
 
 
 /*=======================who i am==========================*/
+.who-i-am-container{
+  padding: 5rem 1rem;
+}
 .image {
   width: 90vw;
   text-align: center;
@@ -368,6 +372,7 @@ button:hover {
   text-align: center;
   margin: 2rem auto;
   text-align: center;
+  
 }
 .image {
   width: 250px;
@@ -437,6 +442,7 @@ button:hover {
 /*==my skills==*/
 .skills-container{
   background-color: #444;
+  padding: 5rem 1rem;
 }
 .my-skills {
   width: 100%;
@@ -446,7 +452,7 @@ button:hover {
   background-color: #444;
   right: 0;
   left: 0;
-  padding: 1em;
+  
   color: #ccc;
   margin: 0 auto;
 }
@@ -523,7 +529,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 25vh;
+  /* height: 25vh; */
+  height:auto;
   width: 100%;
   bottom: 0;
   top: 100%;
@@ -549,8 +556,6 @@ footer {
   color: rgb(8, 105, 73);
   text-decoration: none;
   font-size: 1.25rem;
-}
-.email a:hover {
 }
 footer ul {
   display: flex;
@@ -578,7 +583,8 @@ footer li {
 }
 @media screen and (min-width:768px){
   footer{
-    height:30vh ;
+   /*  height:30vh ; */
+    height: auto;
     bottom: -10px;
   }
 footer li{
