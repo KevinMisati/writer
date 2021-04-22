@@ -11,12 +11,20 @@ body {
 :root {
   --clr-primary1: #8e443d;
   --clr-primary2: #8390fa;
+  --clr-3:#FA8390;
+  /* --clr-3:#d9fef0;
+  --clr-3:#83fab2; */
+
+  /* --clr-3:#F76514; */
 }
+
 section{
   padding: 5rem 0rem;
 }
 p {
-  line-height: 1.5em;
+  line-height: 1.5rem;
+  letter-spacing: .045rem;
+  font-size: 1.2rem;
 }
 h1 {
   font-size: 3.5rem;
@@ -64,7 +72,8 @@ header {
 
 div.title {
   margin-left: 2em;
-  margin-top: .9rem;
+  display: flex;
+  align-items: center;
   font-size :1.5rem;
   height: 100%;
   display: flex;
@@ -73,6 +82,7 @@ div.title {
 }
 .title a{
   text-decoration: none;
+  color:var(--clr-3);
 }
 div.title span{
   color:crimson;
@@ -197,7 +207,7 @@ nav a:hover {
     position: relative;
     width: 30px;
     height: 3.6px;
-    background-color: #555;
+    background-color: var(--clr-3);
     margin: 5px;
     transition: transform .5s ease-in-out;
   }
@@ -412,7 +422,7 @@ button:hover {
   width: 100%;
   height: 100%;
   z-index: -50;
-  border: 4px solid red;
+  border: 4px solid  var(--clr-3);
 }
 .image:hover .image:after {
   top: 0;
